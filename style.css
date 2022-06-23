@@ -4,12 +4,32 @@ body{
 
 header{
     background: #D90429;
-    padding: 20rem 0;
+    padding: 20px 0;
+    border-bottom:14px solid #EF233C;
+}
+
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .principal{
-    padding: em;
+    padding: 3em 0;
     background: #EDF2F4;
     width: 940px;
     margin: 0 auto;
+    border: 3px solid #EDF2F4;
+    border-radius: 10px;
+}
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+footer{
+    border-top: 14px solid #8D99AE;
+    text-align: center;
+    background: #2B2D42;
+    padding: 40px 0;
 }
