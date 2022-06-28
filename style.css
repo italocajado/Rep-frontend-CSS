@@ -62,14 +62,16 @@ h2{
     font-size: 18px;
 }
 
-/* 3D flip photo */
 .descricao{
     padding-top: 10px ;
     font-size: 18px;
 }
 
 .estilos{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 940px;
     margin: 10px;
     padding: 50px ;
@@ -87,12 +89,15 @@ h2{
     border-radius: 10px;
 }
 
+/* 3D flip photo */
+
+
 .card-container{
     perspective: 800px;
 }
 
 .card {
-    width: center;
+    width: 200px;
     height: 200px;
     transform-style: preserve-3d;
     position: relative;
@@ -248,4 +253,78 @@ circle:nth-child(1){
     to{
         transform: translateY(10px);
     }
+}
+
+/* Button effect */
+.btn {
+    height: 3rem;
+    width: 9rem;
+    margin: 20px;
+    border: 3px solid #f20303;
+    background: transparent;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn::before,
+.btn::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: 0.5s ease;
+}
+
+.btn::before{
+    left: -15px;
+    top: -15px;
+    border-width: 3px 0 0 3px;
+}
+
+.btn::after{
+    right: -15px;
+    bottom: -15px;
+    border-width: 0 3px 3px 0;
+}
+
+.btn:hover::after, 
+.btn:hover::before{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+}
+
+/* checkbox */
+
+label{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+input{
+    position: middle;
+    transform: scale(0);
+}
+
+input:checked ~ .checkbox{
+    transform: rotate(45deg);
+    width: 20px;
+    margin-left: 16px;
+    border-color: #24c78e;
+    border-top: transparent;
+    border-left: transparent;
+    border-radius: 0;
+}
+
+.checkbox{
+    display: block;
+    width: inherit;
+    height: inherit;
+    border: 3px solid #434343;
+    border-radius: 6px;
+    transition: all 0.375s;
 }
