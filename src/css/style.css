@@ -4,15 +4,33 @@ body{
 }
 
 header{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Rubik";
     background: #D90429;
     padding: 20px 0;
     border-bottom:14px solid #EF233C;
 }
 
 .caixa {
+    display:flex ;
+    justify-content: space-between;
     position: relative;
     width: 940px;
     margin: 0 auto;
+}
+
+
+.contatocmg{
+    text-align: center;
+    display: block;
+}
+
+li{
+    justify-content: center;
+    display: block;
+    text-align: center;
+    padding: 10px;
 }
 
 nav {
@@ -23,7 +41,7 @@ nav {
 
 nav li{
     display: inline;
-    align-content: center;;
+    align-content: center;
 }
 
 nav a {
@@ -38,19 +56,31 @@ nav a:hover {
 }
 
 .principal{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 3em 0;
     background: #EDF2F4;
     width: 940px;
     margin: 0 auto;
     border: 3px solid #EDF2F4;
     border-radius: 10px;
+    word-break: break-all;
 }
 
 .principal p{
-    margin: 0 0 1em;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 footer{
+    position: relative;
+    bottom: 0;
     border-top: 14px solid #8D99AE;
     text-align: center;
     background: #2B2D42;
@@ -70,11 +100,10 @@ h2{
 .estilos{
     display: flex;
     align-items: center;
-    flex-direction: row;
     flex-wrap: wrap;
-    width: 940px;
-    margin: 10px;
-    padding: 50px ;
+    width: auto;
+    margin: 5px;
+    padding: 10px ;
 }
 
 .estilos li{
@@ -97,7 +126,7 @@ h2{
 }
 
 .card {
-    width: 200px;
+    width: auto;
     height: 200px;
     transform-style: preserve-3d;
     position: relative;
@@ -137,7 +166,7 @@ h2{
 }
 
 .button::after {
-    content: url(/imagens/sun-line.svg);
+    content: url(/src/imagens/sun-line.svg);
     width: 40px;
     height: 40px;
     background-color: #D90429;
@@ -154,7 +183,7 @@ h2{
 }
 
 #toggle:checked + .button::after{
-    content: url(/imagens/moon-line.svg);
+    content: url(/src/imagens/moon-line.svg);
     background-color: #1f257f;
     transform: translateX(50px) rotate(360deg);
 }
@@ -168,7 +197,7 @@ h2{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin: 60px 60px 20px;
+    margin: 60px 60px 30px 30px;
 }
 
 .loader span{
@@ -208,7 +237,7 @@ h2{
 /* card glass effect */
 
 .card-glass{
-    width: 150px;
+    width: auto;
     height: 200px;
     position: relative;
     margin: 40px;
